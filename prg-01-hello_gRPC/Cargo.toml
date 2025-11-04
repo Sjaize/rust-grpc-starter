@@ -1,0 +1,21 @@
+[package]
+name = "prg-01-hello_gRPC"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tonic = "0.3"
+prost = "0.6"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+
+[build-dependencies]
+tonic-build = "0.3"
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/client.rs"
+
